@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <h1>Booklets</h1>
+</center>
+<table
+  class="table table-striped table-bordered table-hover"
+  style="width: 50em; margin-left: auto; margin-right: auto"
+>
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>Uploaded On</th>
+      <th>Last Modified</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for booklet in booklets %}
+    <tr>
+      <td>{{booklet.title}}</td>
+      <td>{{booklet.date}}</td>
+      <td>{{booklet.updated}}</td>
+      <td><a href=" {{booklet.file.url}} ">link </a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
