@@ -11,4 +11,4 @@ pip install django-crispy-forms
 ```
 ---
 ### Note:-
-I have learned PHP for the first time. Due to time constraints I wasn't able to concentrate on frontend. Anyhow I am very bad at frontend.
+I have learned Django for the first time. Due to time constraints I wasn't able to concentrate on frontend. Anyhow I am very bad at frontend.
