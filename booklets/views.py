@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from .forms import BookletForm,Register
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.contrib.admin.forms import AdminAuthenticationForm
+from django.contrib.auth.decorators import login_required 
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Booklet
 # Create your views here.
@@ -29,7 +28,7 @@ def register(request):
 
 @staff_member_required
 def addBooklet(request):
-    b=Booklet.objects.all()
+    b=Booklet.objects.all() 
     if request.method == 'POST':
         form = BookletForm(request.POST, request.FILES)
         print(form.errors)
